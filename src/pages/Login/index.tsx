@@ -1,16 +1,31 @@
+import { useState } from 'react'
 import { Button } from '../../components/Button'
 import { InputText } from '../../components/InputText'
 import { Container, DivLeft, DivRight } from './style'
 
 export function Login() {
+  const [name, setName] = useState('')
+  const [password, setPassword] = useState('')
+
+  console.log(name, password)
+
   return (
     <Container>
       <DivLeft>
         <h1>Tela de Login</h1>
-        <InputText title="CPF" />
-        <InputText title="Senha" />
+        <InputText title="E-mail" onChange={(e) => setName(e.target.value)} />
+        <InputText
+          title="Senha"
+          type="password"
+          onChange={(e) => setPassword(e.target.value)}
+        />
 
-        <Button title="Entrar" variant="secondary" disabled={false} />
+        <Button
+          onClick={() => console.log(name, password)}
+          title="Entrar"
+          variant="secondary"
+          disabled={false}
+        />
       </DivLeft>
 
       <DivRight>
