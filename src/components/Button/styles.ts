@@ -38,4 +38,9 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   }}
 
   cursor: pointer;
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
 `

@@ -10,7 +10,7 @@ export function Login() {
         <InputText title="CPF" />
         <InputText title="Senha" />
 
-        <Button title="Entrar" variant="secondary" />
+        <Button title="Entrar" variant="secondary" disabled={false} />
       </DivLeft>
 
       <DivRight>
