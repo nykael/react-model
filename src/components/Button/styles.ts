@@ -7,12 +7,12 @@ interface ButtonContainerProps {
 }
 
 export const ButtonContainer = styled.button<ButtonContainerProps>`
-  width: 100px;
-  height: 40px;
+  height: 50px;
   border-radius: 8px;
   border: 0;
-  margin: auto 10px;
+  width: 100%;
   color: ${({ theme }) => theme.WHITE};
+  border-radius: 20px;
 
   ${(props) => {
     switch (props.variant) {
