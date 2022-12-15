@@ -17,9 +17,15 @@ export function Login() {
   } = useForm<FormData>()
 
   const [passwordVisible, setPasswordVisible] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
   function handleForm(data: FormData) {
+    setIsLoading(true)
     console.log(data)
+
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 2000)
   }
 
   return (
@@ -61,7 +67,7 @@ export function Login() {
           onClick={handleSubmit(handleForm)}
           title="Entrar"
           variant="secondary"
-          disabled={false}
+          disabled={isLoading}
         />
       </DivLeft>
 

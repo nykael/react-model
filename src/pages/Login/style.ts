@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   max-width: 1700;
-  margin: 3% 10%;
+  margin: 3% 18%;
   background-color: ${({ theme }) => theme.WHITE};
   height: 70rem;
 
