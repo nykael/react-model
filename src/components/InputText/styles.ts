@@ -11,7 +11,7 @@ export const TextInput = styled.div`
     width: 100%;
     font-size: 1.6rem;
     color: ${({ theme }) => theme.GRAY_200};
-    margin-bottom: 1.6rem;
+    margin-top: 1.6rem;
 
     &:focus {
       outline: none;
@@ -20,7 +20,7 @@ export const TextInput = styled.div`
 
     &:focus ~ label {
       background-color: ${({ theme }) => theme.SECONDARY};
-      padding: 0 1.6rem;
+      padding: 0 2rem;
       color: ${({ theme }) => theme.GRAY_200};
     }
   }
@@ -35,4 +35,21 @@ export const TextInput = styled.div`
     transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateY(-49%) scale(0.9);
   }
+`
+
+export const ErrorMessage = styled.div`
+  color: ${({ theme }) => theme.RED};
+  margin-bottom: 1.5rem;
+
+  p {
+    padding: 0 1rem;
+    margin-top: 0.1rem;
+  }
+`
+
+export const IconEyes = styled.div`
+  position: absolute;
+  left: 92%;
+  bottom: 1rem;
+  cursor: pointer;
 `
